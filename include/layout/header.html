@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>[사전테스트 - 게시판]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
+    <script src="include/javascript/ajax.js"></script>
+    <link href="//fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="include/css/style.css">
+    <?php
+        session_start();
+        if(!isset($_SESSION['userid'])){
+            header ('Location: ./login.html');
+        }
+    ?>
+</head>
+
+<body>
+    <div>
+        <a href="/logout_proc.php">로그아웃</a>
+    </div>
